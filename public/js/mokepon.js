@@ -42,7 +42,7 @@ let vidasEnemigo = 3
 let lienzo = mapa.getContext("2d")
 let intervalo
 let mapaBackground = new Image()
-mapaBackground.src = './assets/mokemap.png'
+mapaBackground.src = './public/assets/mokemap.png'
 let alturaQueBuscamos
 let anchoDelMapa = window.innerWidth - 20
 const anchoMaximoDelMapa = 350
@@ -79,9 +79,9 @@ class Mokepon {
         )
     }
 }
-let hipodoge = new Mokepon('Hipodoge', './assets/mokepons_mokepon_hipodoge_attack.png', 5, './assets/hipodoge.png')
-let capipepo = new Mokepon('Capipepo', './assets/mokepons_mokepon_capipepo_attack.png', 5, './assets/capipepo.png')
-let ratigueya = new Mokepon('Ratigueya', './assets/mokepons_mokepon_ratigueya_attack.png', 5, './assets/ratigueya.png')
+let hipodoge = new Mokepon('Hipodoge', './public/assets/mokepons_mokepon_hipodoge_attack.png', 5, './public/assets/hipodoge.png')
+let capipepo = new Mokepon('Capipepo', './public/assets/mokepons_mokepon_capipepo_attack.png', 5, './public/assets/capipepo.png')
+let ratigueya = new Mokepon('Ratigueya', './public/assets/mokepons_mokepon_ratigueya_attack.png', 5, './public/assets/ratigueya.png')
 const HIPODOGE_ATAQUES = [
     { nombre: '💧', id: 'boton-agua' },
     { nombre: '💧', id: 'boton-agua' },
@@ -379,11 +379,11 @@ function enviarPosicion(x, y) {
                         let mokeponEnemigo = null
                         const mokeponNombre = enemigo.mokepon.nombre || ""
                         if (mokeponNombre === "Hipodoge") {
-                            mokeponEnemigo = new Mokepon('Hipodoge', './assets/mokepons_mokepon_hipodoge_attack.png', 5, './assets/hipodoge.png', enemigo.id)
+                            mokeponEnemigo = new Mokepon('Hipodoge', './public/assets/mokepons_mokepon_hipodoge_attack.png', 5, './public/assets/hipodoge.png', enemigo.id)
                         } else if (mokeponNombre === "Capipepo") {
-                            mokeponEnemigo = new Mokepon('Capipepo', './assets/mokepons_mokepon_capipepo_attack.png', 5, './assets/capipepo.png', enemigo.id)
+                            mokeponEnemigo = new Mokepon('Capipepo', './public/assets/mokepons_mokepon_capipepo_attack.png', 5, './public/assets/capipepo.png', enemigo.id)
                         } else if (mokeponNombre === "Ratigueya") {
-                            mokeponEnemigo = new Mokepon('Ratigueya', './assets/mokepons_mokepon_ratigueya_attack.png', 5, './assets/ratigueya.png', enemigo.id)
+                            mokeponEnemigo = new Mokepon('Ratigueya', './public/assets/mokepons_mokepon_ratigueya_attack.png', 5, './public/assets/ratigueya.png', enemigo.id)
                         }
                         mokeponEnemigo.x = enemigo.x
                         mokeponEnemigo.y = enemigo.y
